@@ -9,7 +9,8 @@ Provides a better projects overview.
 * Project homepage styled in a box
 * Project custom fields styled in a box
 
-![Project Overview](screenshots/ProjectOverview.png)!
+![Project Overview](screenshots/ProjectOverview.png)
+
 ## Installation
 
 Place the plugin code under the plugins directory and run 'bundle install', then restart Rails. 
