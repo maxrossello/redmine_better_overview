@@ -1,0 +1,2 @@
+<!-- add_to_attributes 'ul' namespaced
+attributes :style => 'display: contents' -->
