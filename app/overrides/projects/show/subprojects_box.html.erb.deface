@@ -1,0 +1,23 @@
+<!-- replace 'div .projects' namespaced -->
+    <% issues_by_subproject = Issue.by_subproject(@project) || [] %>
+    <div class="projects box">
+      <h3 class="icon icon-projects"><%=l(:label_subproject_plural)%></h3>
+      <table class="list">
+        <thead><tr>
+          <th style="width:25%"></th>
+          <th align="center" style="width:25%"><%=l(:label_open_issues_plural)%></th>
+          <th align="center" style="width:25%"><%=l(:label_closed_issues_plural)%></th>
+          <th align="center" style="width:25%"><%=l(:label_total)%></th>
+        </tr></thead>
+      <tbody>
+        <% for row in @subprojects %>
+          <tr class="<%= cycle("odd", "even") %>">
+            <td><%= link_to h(row.name), aggregate_path(@project, row.name, row) %></td>
+            <td align="center"><%= aggregate_link issues_by_subproject, { "project_id" => row.id, "closed" => 0 }, aggregate_path(@project, row.id, row, :status_id => "o") %></td>
+            <td align="center"><%= aggregate_link issues_by_subproject, { "project_id" => row.id, "closed" => 1 }, aggregate_path(@project, row.name, row, :status_id => "c") %></td>
+            <td align="center"><%= aggregate_link issues_by_subproject, { "project_id" => row.id }, aggregate_path(@project, row.name, row, :status_id => "*") %></td>
+          </tr>
+        <% end %>
+      </tbody>
+      </table>
+    </div>
