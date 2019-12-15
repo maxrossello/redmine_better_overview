@@ -30,7 +30,7 @@ plugin = Redmine::Plugin.register :redmine_better_overview do
   version '1.0.0'
   url 'https://github.com/maxrossello/redmine_better_overview.git'
   author_url 'https://github.com/maxrossello'
-  requires_redmine :version_or_higher => '2.6.0'
+  requires_redmine :version_or_higher => '4.0.0'
 end
 
 Rails.configuration.to_prepare do

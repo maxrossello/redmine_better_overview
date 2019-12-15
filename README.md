@@ -1,6 +1,6 @@
 # Redmine Better Overview
 
-Compatible with Redmine 2.6.x-3.4.x.
+Compatible with Redmine 4.0.x.
 
 Provides a better projects overview.
 

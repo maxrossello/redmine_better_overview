@@ -1,0 +1,14 @@
+.buildpath
+.byebug_history
+.metadata/
+.project
+Gemfile.lock
+config/
+coverage/
+db/
+files/
+log/
+public/
+test/html_reports/
+tmp/
+

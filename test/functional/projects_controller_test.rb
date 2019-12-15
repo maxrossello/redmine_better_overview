@@ -49,14 +49,15 @@ class ProjectsControllerTest < Redmine::ControllerTest
   end
 
   def test_show_should_display_visible_custom_fields_in_a_box
-    ProjectCustomField.find_by_name('Development status').update_attribute :visible, true
+    cf = ProjectCustomField.find_by_name('Development status')
+    cf.update_attribute :visible, true
     get :show, :params => {
         :id => 'ecookbook'
       }
     assert_response :success
 
-    assert_select '.box h3', :text => /Development status/
-    assert_select '.custom', :text => /Stable/
+    assert_select ".box h3.cf_#{cf.id}", :text => /#{cf.name}/
+    assert_select '.custom.box', :text => /Stable/
   end
 
   def test_show_should_not_display_blank_custom_fields_with_multiple_values

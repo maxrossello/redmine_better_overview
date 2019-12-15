@@ -1,5 +1,5 @@
 <!-- replace 'ul li:last-of-type' namespaced -->
       <div class="custom box">
-        <h3><%= custom_field.name %></h3>
+        <h3 class="cf_<%= custom_field.id %>"><%= custom_field.name %></h3>
         <%= formatted %>
       </div>
