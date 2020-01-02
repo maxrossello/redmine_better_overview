@@ -1,5 +1,5 @@
-<!-- replace 'ul li:last-of-type' namespaced -->
+<!-- replace '.splitcontentleft>ul:first-of-type li:last-of-type' namespaced -->
       <div class="custom box">
-        <h3 class="cf_<%= custom_field.id %>"><%= custom_field.name %></h3>
+        <h3 class="<%= custom_field.css_classes %>"><%= custom_field.name %></h3>
         <%= formatted %>
       </div>

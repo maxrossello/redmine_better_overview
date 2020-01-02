@@ -1,6 +1,6 @@
 # Redmine Better Overview
 
-Compatible with Redmine 4.0.x.
+Compatible with Redmine 4.1.x. The plugin version corresponds to minimum version of Redmine required.
 
 Provides a better projects overview.
 

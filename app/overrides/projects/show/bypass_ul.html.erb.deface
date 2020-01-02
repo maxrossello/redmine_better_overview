@@ -1,2 +1,2 @@
-<!-- add_to_attributes 'ul' namespaced
+<!-- add_to_attributes '.splitcontentleft>ul:first-of-type' namespaced
 attributes :style => 'display: contents' -->
