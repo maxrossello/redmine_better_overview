@@ -1,5 +1,5 @@
 <!-- replace 'ul li:first-of-type' namespaced -->
     <div class="homepage box">
       <h3><%=l(:field_homepage)%></h3>
-      <%= link_to_if uri_with_safe_scheme?(@project.homepage), @project.homepage, @project.homepage %>
+      <p><%= link_to_if uri_with_safe_scheme?(@project.homepage), @project.homepage, @project.homepage %></p>
     </div>
