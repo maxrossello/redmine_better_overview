@@ -20,7 +20,8 @@
 
 require File.expand_path('../../test_helper', __FILE__)
 
-class ProjectsControllerTest < Redmine::ControllerTest
+class BetterOverviewProjectsControllerTest < Redmine::ControllerTest
+  tests ProjectsController
   fixtures :projects, :custom_fields, :custom_values,
            :users, :roles, :members, :member_roles
 

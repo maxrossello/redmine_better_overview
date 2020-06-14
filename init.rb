@@ -27,7 +27,7 @@ plugin = Redmine::Plugin.register :redmine_better_overview do
   name 'Redmine Better Project Overview plugin'
   author 'Massimo Rossello'
   description 'Displays a better project overview'
-  version '1.0.1'
+  version '1.0.2'
   url 'https://github.com/maxrossello/redmine_better_overview.git'
   author_url 'https://github.com/maxrossello'
   requires_redmine :version_or_higher => '4.0.0'
