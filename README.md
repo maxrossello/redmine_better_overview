@@ -1,6 +1,6 @@
 # Redmine Better Overview
 
-Compatible with Redmine 4.1.x. The plugin version corresponds to minimum version of Redmine required.
+The plugin version corresponds to minimum version of Redmine required. Look at dedicated branch for each Redmine version.
 
 Provides a better projects overview.
 
