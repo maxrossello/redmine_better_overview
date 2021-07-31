@@ -1,7 +1,5 @@
 # Redmine Better Overview
 
-The plugin version corresponds to minimum version of Redmine required. Look at dedicated branch for each Redmine version.
-
 Provides a better projects overview.
 
 * Subprojects displayed as a table including stats about open/closed/total issues
@@ -10,6 +8,12 @@ Provides a better projects overview.
 * Project custom fields styled in a box
 
 ![Project Overview](screenshots/ProjectOverview.png)
+
+## Version
+
+Tests are performed through [redmine_testsuites](https://github.com/maxrossello/redmine_testsuites) including all the plugins it supports.
+
+The plugin version corresponds to minimum version of Redmine required. Look at dedicated branch for each Redmine version.
 
 ## Installation
 
