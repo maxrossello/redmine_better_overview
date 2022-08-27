@@ -20,6 +20,7 @@
 # SOFTWARE.
 
 require 'redmine'
+require 'deface'
 
 Rails.logger.info 'Better project overview'
 
@@ -27,14 +28,19 @@ plugin = Redmine::Plugin.register :redmine_better_overview do
   name 'Redmine Better Project Overview plugin'
   author 'Massimo Rossello'
   description 'Displays a better project overview'
-  version '4.2.1'
+  version '5.0.2'
   url 'https://github.com/maxrossello/redmine_better_overview.git'
   author_url 'https://github.com/maxrossello'
-  requires_redmine :version_or_higher => '4.2.0'
+  requires_redmine :version_or_higher => '5.0.2'
+end
+
+# missing in first version of redmine_base_deface for Rails 6.1      
+Dir.glob("#{Rails.root}/plugins/redmine_better_overview/app/overrides/**/*.deface").each do |path|
+  Deface::DSL::Loader::load File.expand_path(path, __FILE__)
 end
 
 Rails.configuration.to_prepare do
-    plugin.requires_redmine_plugin :redmine_base_deface, '1.5.3'
+    plugin.requires_redmine_plugin :redmine_base_deface, '1.6.2'
 end
 
 ProjectsController.send(:helper, :reports)
