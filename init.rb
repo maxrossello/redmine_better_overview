@@ -39,7 +39,7 @@ Dir.glob("#{Rails.root}/plugins/redmine_better_overview/app/overrides/**/*.defac
   Deface::DSL::Loader::load File.expand_path(path, __FILE__)
 end
 
-Rails.configuration.to_prepare do
+Rails.configuration.after_initialize do
     plugin.requires_redmine_plugin :redmine_base_deface, '1.6.2'
 end
 
