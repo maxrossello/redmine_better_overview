@@ -28,10 +28,10 @@ plugin = Redmine::Plugin.register :redmine_better_overview do
   name 'Redmine Better Project Overview plugin'
   author 'Massimo Rossello'
   description 'Displays a better project overview'
-  version '5.0.2'
+  version '5.1.0'
   url 'https://github.com/maxrossello/redmine_better_overview.git'
   author_url 'https://github.com/maxrossello'
-  requires_redmine :version_or_higher => '5.0.2'
+  requires_redmine :version_or_higher => '5.1.0'
 end
 
 # missing in first version of redmine_base_deface for Rails 6.1      
