@@ -28,10 +28,10 @@ plugin = Redmine::Plugin.register :redmine_better_overview do
   name 'Redmine Better Project Overview plugin'
   author 'Massimo Rossello'
   description 'Displays a better project overview'
-  version '6.1.0'
+  version '7.0.0'
   url 'https://github.com/maxrossello/redmine_better_overview.git'
   author_url 'https://github.com/maxrossello'
-  requires_redmine :version_or_higher => '6.1.0'
+  requires_redmine :version_or_higher => '7.0.0'
 end
 
 # missing in first version of redmine_base_deface for Rails 6.1      
@@ -40,7 +40,7 @@ Dir.glob("#{Rails.root}/plugins/redmine_better_overview/app/overrides/**/*.defac
 end
 
 Rails.configuration.after_initialize do
-    plugin.requires_redmine_plugin :redmine_base_deface, '6.1.0'
+    plugin.requires_redmine_plugin :redmine_base_deface, '7.0.0'
 end
 
 ProjectsController.send(:helper, :reports)
